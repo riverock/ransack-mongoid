@@ -32,7 +32,7 @@ module Ransack
           # when :decimal
           # else # :string
 
-          #name = '_id' if name == 'id'
+          name = '_id' if name == 'id'
 
           t = object.klass.fields[name].try(:type) || bind_pair_for(attr.name).first.fields[name].type
 
